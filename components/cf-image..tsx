@@ -5,10 +5,12 @@ const normalizeSrc = (src: string) => {
 };
 
 const cloudflareLoader: ImageLoader = ({ src, width, quality }) => {
-    if (!quality) {
-        quality = 75
+    const params = [`width=${width}`];
+    if (quality) {
+        params.push(`quality=${quality}`);
     }
-    return `https://images.dankchat.workers.dev?width=${width}&quality=${quality}&image=https://dank.chat/${normalizeSrc(src)}`
+    const paramsString = params.join(',');
+    return `/cdn-cgi/image/${paramsString}/${normalizeSrc(src)}`;
 };
 
 export const CfImage = (props: ImageProps) => {
