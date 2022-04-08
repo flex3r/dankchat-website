@@ -1,4 +1,4 @@
-import type { NextPage } from 'next'
+import type {NextPage} from 'next'
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 
@@ -7,8 +7,8 @@ const Home: NextPage = () => {
     <div className={styles.container}>
       <Head>
         <title>DankChat</title>
-        <meta name="description" content="FeelsDankMan" />
-        <link rel="icon" href="/favicon.ico" />
+        <meta name="description" content="FeelsDankMan"/>
+        <link rel="icon" href="/favicon.ico"/>
       </Head>
 
       <main className={styles.main}>
@@ -16,10 +16,10 @@ const Home: NextPage = () => {
           <a href="https://github.com/flex3r/dankchat">DankChat</a>
         </h1>
 
-        <p className={styles.description}>
-            <img src={"/images/gtKk7.png"} width={500} height={500} alt={"FeelsDankMan"}/>
-        </p>
-
+        <div className={styles.description}>
+          <img style={{width: "100%", objectFit: "contain"}} src={"/images/gtKk7.png"} width={500} height={500}
+               alt={"FeelsDankMan"}/>
+        </div>
       </main>
 
       <footer className={styles.footer}>
