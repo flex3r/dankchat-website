@@ -1,6 +1,6 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import Image from 'next/image'
+import { CfImage } from '../components/cf-image.'
 import styles from '../styles/Home.module.css'
 
 const Home: NextPage = () => {
@@ -18,7 +18,7 @@ const Home: NextPage = () => {
         </h1>
 
         <p className={styles.description}>
-            <Image src={"/gtKk7.png"} width={500} height={500}/>
+            <CfImage src={"/gtKk7.png"} width={500} height={500}/>
         </p>
 
       </main>
