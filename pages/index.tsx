@@ -18,7 +18,7 @@ const Home: NextPage = () => {
         </h1>
 
         <p className={styles.description}>
-            <CfImage src={"/gtKk7.png"} width={500} height={500}/>
+            <CfImage src={"/images/gtKk7.png"} width={500} height={500}/>
         </p>
 
       </main>
