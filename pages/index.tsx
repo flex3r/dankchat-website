@@ -30,6 +30,20 @@ const Home: NextPage = () => {
         >
           GitHub
         </a>
+        <a
+          href="https://play.google.com/store/apps/details?id=com.flxrs.dankchat"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Play Store
+        </a>
+        <a
+          href="https://f-droid.org/packages/com.flxrs.dankchat/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          F-Droid
+        </a>
       </footer>
     </div>
   )
