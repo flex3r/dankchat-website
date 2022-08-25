@@ -1,14 +1,32 @@
-import type {NextPage} from 'next'
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import type { NextPage } from "next";
+import Head from "next/head";
+import { useEffect } from "react";
+import styles from "../styles/Home.module.css";
 
 const Home: NextPage = () => {
+  // fix 100vh bug on mobile:
+  // https://ilxanlar.medium.com/you-shouldnt-rely-on-css-100vh-and-here-s-why-1b4721e74487
+  useEffect(() => {
+    function calculateVh() {
+      var vh = window.innerHeight * 0.01;
+      document.documentElement.style.setProperty("--vh", vh + "px");
+    }
+
+    // Initial calculation
+    calculateVh();
+
+    // Re-calculate on resize
+    window.addEventListener("resize", calculateVh);
+
+    // Re-calculate on device orientation change
+    window.addEventListener("orientationchange", calculateVh);
+  }, []);
   return (
     <div className={styles.container}>
       <Head>
         <title>DankChat</title>
-        <meta name="description" content="FeelsDankMan"/>
-        <link rel="icon" href="/favicon.ico"/>
+        <meta name="description" content="FeelsDankMan" />
+        <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main className={styles.main}>
@@ -17,8 +35,13 @@ const Home: NextPage = () => {
         </h1>
 
         <div className={styles.description}>
-          <img style={{width: "100%", objectFit: "contain"}} src={"/images/gtKk7.png"} width={500} height={500}
-               alt={"FeelsDankMan"}/>
+          <img
+            style={{ width: "100%", objectFit: "contain" }}
+            src={"/images/gtKk7.png"}
+            width={500}
+            height={500}
+            alt={"FeelsDankMan"}
+          />
         </div>
       </main>
 
@@ -46,7 +69,7 @@ const Home: NextPage = () => {
         </a>
       </footer>
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
