@@ -11,15 +11,17 @@ const Home: NextPage = () => {
       var vh = window.innerHeight * 0.01;
       document.documentElement.style.setProperty("--vh", vh + "px");
     }
-
     // Initial calculation
     calculateVh();
 
-    // Re-calculate on resize
+    // Re-calculate on resize & orientation change
     window.addEventListener("resize", calculateVh);
-
-    // Re-calculate on device orientation change
     window.addEventListener("orientationchange", calculateVh);
+    return () => {
+      // make sure to cleanup the listener
+      window.addEventListener("resize", calculateVh);
+      window.addEventListener("orientationchange", calculateVh);
+    };
   }, []);
   return (
     <div className={styles.container}>
