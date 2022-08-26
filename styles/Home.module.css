@@ -1,6 +1,8 @@
 .container {
   padding: 0 2rem;
   min-height: 100vh;
+  /* --vh is calculated CSS variable that is update to window's innerHeight */
+  min-height: calc(100 * var(--vh, 1vh));
   display: flex;
   flex-direction: column;
 }
