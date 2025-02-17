@@ -8,7 +8,7 @@ const Home: NextPage = () => {
   // https://ilxanlar.medium.com/you-shouldnt-rely-on-css-100vh-and-here-s-why-1b4721e74487
   useEffect(() => {
     function calculateVh() {
-      var vh = window.innerHeight * 0.01
+      const vh = window.innerHeight * 0.01
       document.documentElement.style.setProperty("--vh", vh + "px")
     }
     // Initial calculation
