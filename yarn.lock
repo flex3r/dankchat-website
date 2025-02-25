@@ -862,7 +862,7 @@ __metadata:
     eslint: "npm:9.21.0"
     eslint-config-next: "npm:15.1.7"
     next: "npm:14.2.21"
-    next-themes: "npm:^0.2.1"
+    next-themes: "npm:^0.4.4"
     react: "npm:18.2.0"
     react-dom: "npm:18.2.0"
     typescript: "npm:5.1.6"
@@ -2609,14 +2609,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"next-themes@npm:^0.2.1":
-  version: 0.2.1
-  resolution: "next-themes@npm:0.2.1"
+"next-themes@npm:^0.4.4":
+  version: 0.4.4
+  resolution: "next-themes@npm:0.4.4"
   peerDependencies:
-    next: "*"
-    react: "*"
-    react-dom: "*"
-  checksum: 10c0/979dec0a2de049ce7d1b5da835e7f7dc3b7ec83ba9e464348f497a52a6a6e5b5c395c97f071f66a63f50f22cce89fb6d19061ec7e75643b0eab215b21794bde7
+    react: ^16.8 || ^17 || ^18 || ^19 || ^19.0.0-rc
+    react-dom: ^16.8 || ^17 || ^18 || ^19 || ^19.0.0-rc
+  checksum: 10c0/45d82f968ccfc90f6e6e3cdb95962132f6d1e19eaf614c4e824fc5d079ec522dd50cc196c58da2f000d755b81dbb0caf378c4f512a9e6b6c0a0daa3f99f1a2c7
   languageName: node
   linkType: hard
 
